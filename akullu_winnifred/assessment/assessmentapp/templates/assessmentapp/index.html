@@ -46,6 +46,15 @@
             border: 2px solid #0C5F52;
         }
 
+        select:valid {
+            border: 2px solid #0C5F52;
+        }
+
+        select:invalid {
+            border: 2px solid #0C5F52;
+        }
+
+
         #num {
             border: solid 2px;
             border-color: RGB(0, 176, 80);
@@ -63,15 +72,16 @@
 
         .form-select {
             margin-bottom: 10px;
-            background-color: #e0f7fa; /* Specific background color for select fields */
+            background-color: #e0f7fa;
         }
 
-        #but{
-           background-color:#0C5F52 ; 
-           margin-left: 55%;
-           width: 45%;
-           
+        #but {
+            background-color: #0C5F52;
+            margin-left: 55%;
+            width: 45%;
+
         }
+
     </style>
 </head>
 
@@ -123,7 +133,8 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="entryscheme">Entry Scheme</label>
-                                <select class="form-select" aria-label="Default select example" name="entryscheme" required>
+                                <select class="form-select" aria-label="Default select example" name="entryscheme"
+                                    required>
                                     <option selected>_ _ select _ _</option>
                                     <option value="1">A-Level certificate</option>
                                     <option value="2">Adult/Mature Learning</option>
@@ -147,7 +158,8 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="sponsorship">Sponsorship</label>
-                                <select class="form-select" aria-label="Default select example" name="sponsorship" required>
+                                <select class="form-select" aria-label="Default select example" name="sponsorship"
+                                    required>
                                     <option selected>_ _ select _ _</option>
                                     <option value="1">Private</option>
                                     <option value="2">Government</option>
@@ -157,19 +169,21 @@
                         </div>
                         <div class="col-md-12">
                             <label for="gender">Gender</label>
-                         
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                  Female
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                  Male
-                                </label>
-                              </div>
+                            <div class flex>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Female
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                        checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Male
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
