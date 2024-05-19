@@ -9,7 +9,7 @@ from .models import *
 class regform(forms.ModelForm):
     class Meta:
         model = Reg
-        fields = '__all__'
+        fields = ['fname', 'lname', 'course', 'entryscheme', 'intake', 'sponsorship', 'gender', 'dob', 'residence']
 
     def clean_date_of_birth(self):
         dob = self.cleaned_data['date of birth']

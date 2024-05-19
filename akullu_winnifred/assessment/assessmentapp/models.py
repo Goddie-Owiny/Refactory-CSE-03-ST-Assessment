@@ -4,7 +4,7 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 import re
 from django.db import models
-from django.core.validators import MinLengthValidator, MaxLengthValidator
+from django.core.validators import MinLengthValidator
 
 
 
@@ -58,15 +58,15 @@ class Reg(models.Model):
     ('Female','Female'),
     )
 
-    fname = models.CharField(max_length=50,blank=False,validators=[validate_letters,MinLengthValidator(3)])
-    lname = models.CharField(max_length=50,blank=False,validators=[validate_letters,MinLengthValidator(3)])
-    course = models.CharField(max_length=200,blank=False,choices=COURSE_CHOICES)
-    entryscheme = models.CharField(max_length=200,blank=False,choices=ENTRY_SCHEME)
-    intake = models.CharField(max_length=200,blank=False,choices=INTAKE_CHOICES)
-    sponsorship = models.CharField(max_length=200,blank=False,choices=SPONSORSHIP_CHOICES)
-    gender = models.CharField(max_length=200,blank=False,choices=GENDER_CHOICES)
+    fname = models.CharField(max_length=50,validators=[validate_letters,MinLengthValidator(3)])
+    lname = models.CharField(max_length=50,validators=[validate_letters,MinLengthValidator(3)])
+    course = models.CharField(max_length=200,choices=COURSE_CHOICES)
+    entryscheme = models.CharField(max_length=200,choices=ENTRY_SCHEME)
+    intake = models.CharField(max_length=200,choices=INTAKE_CHOICES)
+    sponsorship = models.CharField(max_length=200,choices=SPONSORSHIP_CHOICES)
+    gender = models.CharField(max_length=200,choices=GENDER_CHOICES)
     dob = models.DateField(default=timezone.now)
-    residence = models.CharField(max_length=255,blank=False,validators=[validate_letters,MinLengthValidator(2)])
+    residence = models.CharField(max_length=255,validators=[validate_letters,MinLengthValidator(2)])
 
     def __str__(self):
         return f"{self.fname} {self.lname}"
