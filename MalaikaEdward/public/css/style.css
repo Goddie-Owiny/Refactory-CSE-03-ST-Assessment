@@ -1,0 +1,8 @@
+/* Additional CSS for custom styling */
+      .form-container {
+        display: flex;
+        justify-content: space-between;
+      }
+      .col-empty {
+        background-color: #f8f9fa;
+      }
