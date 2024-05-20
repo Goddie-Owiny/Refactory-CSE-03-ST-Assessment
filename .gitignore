@@ -132,6 +132,8 @@ dist
 .yarn/install-state.gz
 .venv/
 .pnp.*
+#vitual environment
+Benjamin_Barry_Mujjawa/venv
 /node_modules
 package-lock.json
 env/
